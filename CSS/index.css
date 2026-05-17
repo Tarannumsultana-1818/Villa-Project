@@ -1,0 +1,356 @@
+/* =============================
+   GLOBAL RESET & BASE STYLES
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #eae1e7;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =============================
+   TOPBAR
+============================= */
+.topbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #925d79;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #613e4f;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0 10px;
+}
+
+.nav-links li a i {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #9a6f82;
+}
+
+/* =============================
+   BUTTONS (VISIT + FILTERS)
+============================= */
+.visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #724655;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.visit-btn i {
+  font-size: 16px;
+}
+
+.visit-btn:hover {
+  background-color: #5a3443;
+  transform: translateY(-3px);
+}
+
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* FILTER BUTTONS */
+.filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  background: transparent;
+  color: #000;
+  border: 2px solid #ddd;
+  padding: 10px 25px;
+  margin-right: 10px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #613e4f;
+  color: #fff;
+  border-color: #613e4f;
+}
+
+/* =============================
+   HERO / BANNER IMAGE
+============================= */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(70%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-overlay h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* =============================
+   PROPERTY CARDS
+============================= */
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* INFO BOX */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.info-box i {
+  font-size: 24px;
+  color: #e74c3c;
+}
+
+/* =============================
+   VIDEO HERO SECTION
+============================= */
+.video-hero {
+  background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80')
+              center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 200px;
+  position: relative;
+}
+
+.video-hero .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.video-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* VIDEO HEADING */
+.video-hero .small-text {
+  color: #ff5722;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.video-hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+}
+
+/* VIDEO THUMBNAIL */
+.video {
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+}
+
+.play-overlay {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.play-overlay img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.play-btn {
+  --size: 72px;
+  --triangle: 18px;
+  --btn-bg: rgba(255,255,255,0.85);
+  --btn-fg: #111;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  border: none;
+  border-radius: 50%;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  cursor: pointer;
+}
+
+.play-btn::before {
+  content: "";
+  border-left: var(--triangle) solid currentColor;
+  border-top: calc(var(--triangle) * .58) solid transparent;
+  border-bottom: calc(var(--triangle) * .58) solid transparent;
+  margin-left: 3px;
+}
+
+/* =============================
+   STATS SECTION
+============================= */
+.stats {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-box {
+  position: relative;
+  background: #ffeeea;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: left;
+  min-width: 160px;
+}
+
+.stat-box .number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f4511e;
+  display: block;
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.stat-box .dot {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 28px;
+  height: 28px;
+  background: #f4511e;
+  border-radius: 50%;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  background: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
